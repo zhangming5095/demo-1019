@@ -1,3 +1,4 @@
+# coding=utf-8
 from mxnet import ndarray as nd
 import numpy as np
 x = np.ones((2, 3))
@@ -11,4 +12,5 @@ b = nd.arange(2).reshape((1, 2))
 print ('a:', a)
 print ('b:', b)
 print ('a+b:', a+b)
+
 

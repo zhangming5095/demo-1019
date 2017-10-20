@@ -4,6 +4,7 @@ import mxnet.autograd as ag
 
 x = nd.array([[1, 2],
              [3, 4]])
+print nd.sum(x)
 # 当进⾏求导的时候，我们需要⼀个地⽅来存 x 的导数，
 # 这个可以通过 NDArray 的⽅法 attach_grad()来要求系统申请对应的空间
 x.attach_grad()

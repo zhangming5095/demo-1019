@@ -5,6 +5,7 @@ y = nd.array(x)
 z = y.asnumpy()
 #print x, y, z
 
+# 广播, reshape() 重新塑形
 a = nd.arange(3).reshape((3, 1))
 b = nd.arange(2).reshape((1, 2))
 print ('a:', a)

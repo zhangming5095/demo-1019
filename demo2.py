@@ -4,6 +4,7 @@ from mxnet import ndarray as nd
 
 x = nd.ones((3, 4))
 y = nd.random_normal(0, 1, shape=(3, 4))
+print y
 a = nd.array([[1, 1],
               [0, 1]])
 b = nd.array([[1, 0],

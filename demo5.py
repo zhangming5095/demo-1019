@@ -12,8 +12,11 @@ def f(a):
         c = 100 * b
     return c
 
-a = nd.random_normal(shape = 3)
+
+a = nd.random_normal(shape=3)
+# 通过 NDArray 的⽅法 attach_grad()来要求系统申请对应的空间
 a.attach_grad()
+# 要使⽤ autograd⾥的 record() 函数来显式的要求 MXNet 记录我们需要求导的程序
 with ag.record():
     c = f(a)
 c.backward()

@@ -1,6 +1,5 @@
 # coding=utf-8
-print '你好'
-
+print('你好')
 
 res = []
 for i in range(1, 16):
@@ -12,4 +11,4 @@ for i in range(1, 16):
         res.append('buzz')
     else:
         res.append(str(i))
-print (' '.join(res))
+print(' '.join(res))

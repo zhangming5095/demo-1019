@@ -1,9 +1,9 @@
-# coding=utf-8
+import OpenSSL.SSL
+
 # 线性回归
 # y = X * [2, -1].T + 1 + noise ,这⾥噪⾳服从均值 0 和标准差为 0.01 的正态分布
 
 import random
-
 from mxnet import ndarray as nd
 from mxnet import autograd
 

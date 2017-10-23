@@ -22,5 +22,4 @@ a.attach_grad()
 with ag.record():
     c = f(a)
 c.backward()  # 通过 z.backward() 来进⾏求导
-print a.grad == c/a
-
+print(a.grad == c / a)

@@ -9,7 +9,7 @@ from mxnet import autograd
 
 # 1,创建数据集
 num_inputs = 2
-num_examples = 1000
+num_examples = 10000
 true_w = [2, -1]
 true_b = 1
 X = nd.random_normal(shape=(num_examples, num_inputs))  # 服从正态分布
@@ -28,6 +28,7 @@ def data_iter():
     for i in range(0, num_examples, batch_size):
         j = nd.array(idx[i:min(i + batch_size, num_examples)])
         yield nd.take(X, j), nd.take(y, j)
+
 
 # 下⾯代码读取第⼀个随机数据块
 #  for data, label in data_iter():
@@ -75,8 +76,4 @@ for e in range(epochs):
         SGD(params, learning_rate)
 
         total_loss += nd.sum(loss).asscalar()
-    print 'Epoch %d, average loss: %f' % (e, total_loss/num_examples)
-
-
-
-
+    print('Epoch %d, average loss: %f' % (e, total_loss / num_examples))

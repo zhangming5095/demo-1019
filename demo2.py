@@ -1,6 +1,5 @@
-# coding=utf-8
+import OpenSSL.SSL
 from mxnet import ndarray as nd
-
 
 x = nd.ones((3, 4))  # 都是1
 y = nd.random_normal(0, 1, shape=(3, 4))  # 服从正态分布
@@ -20,8 +19,7 @@ b = nd.array([[1, 0],
 # print id(y) == before
 
 z = nd.zeros_like(x)  # 全为0, 形状像 x
-print z
+print(z)
 before = id(z)
 z[:] = x + y
-print id(z) == before
-
+print(id(z) == before)
